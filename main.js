@@ -21,6 +21,7 @@ for (let i = 0; i < 5; i++) {
     alert(element)
 }
 
+// creo il timer di 30 sec 
 var count = 30
 
 var counter = setInterval(timer, 1000);
@@ -28,6 +29,7 @@ var counter = setInterval(timer, 1000);
 function timer() {
     count = count - 1;
     if (count <= 0) {
+        // terminato il timer chiedo all'utente di inserire i numeri appena visti
         clearInterval(counter);
         for (let i = 0; i < 5; i++) {
             const element = parseInt(prompt('inserisci qui il numero'));
