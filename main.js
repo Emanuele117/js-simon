@@ -21,5 +21,23 @@ for (let i = 0; i < 5; i++) {
     alert(element)
 }
 
+var count = 30
+
+var counter = setInterval(timer, 1000);
+
+function timer() {
+    count = count - 1;
+    if (count <= 0) {
+        clearInterval(counter);
+        for (let i = 0; i < 5; i++) {
+            const element = parseInt(prompt('inserisci qui il numero'));
+
+        }
+        return;
+    }
+
+
+}
+
 
 
