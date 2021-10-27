@@ -4,3 +4,22 @@
 
 //Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
+/* 
+- alert()
+
+- setTimeout()
+
+- prompt()
+*/
+
+
+// espongo 5 numeri random tramite un alert
+
+for (let i = 0; i < 5; i++) {
+    const element = Math.round(Math.random() * 100);
+
+    alert(element)
+}
+
+
+
