@@ -4,6 +4,7 @@
 
 //Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
+
 /* 
 - alert()
 
@@ -15,14 +16,26 @@
 
 // espongo 5 numeri random tramite un alert
 
-for (let i = 0; i < 5; i++) {
-    const element = Math.round(Math.random() * 100);
+let randomNumbers = []
 
-    alert(element)
+let guessedNumbers = []
+
+i = 0
+
+while (i < 5) {
+
+    const random = Math.round(Math.random() * 100);
+    if (!randomNumbers.includes(random)) {
+        randomNumbers.push(random)
+    }
+
+    i++
 }
+alert(randomNumbers)
+
 
 // creo il timer di 30 sec 
-var count = 30
+var count = 5
 
 var counter = setInterval(timer, 1000);
 
@@ -32,14 +45,17 @@ function timer() {
         // terminato il timer chiedo all'utente di inserire i numeri appena visti
         clearInterval(counter);
         for (let i = 0; i < 5; i++) {
-            const element = parseInt(prompt('inserisci qui il numero'));
-
+            const insertNumber = parseInt(prompt('inserisci qui il numero'));
+            if (!guessedNumbers.includes(insertNumber)) {
+                guessedNumbers.push(insertNumber)
+            }
         }
+
         return;
     }
 
-
 }
+
 
 
 
